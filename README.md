@@ -17,7 +17,7 @@ pip install dlib
 python face_landmarks
 ```
 ## Sample
-
+![](https://raw.githubusercontent.com/TyagiSumit/Syzzo-live-makeup/master/samples/face_landmark.gif)
 
 
 
