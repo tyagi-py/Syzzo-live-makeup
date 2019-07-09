@@ -17,6 +17,7 @@ pip install dlib
 python face_landmarks
 ```
 ## Sample
+face landmark detection 68 landmarks:
 ![](https://raw.githubusercontent.com/TyagiSumit/Syzzo-live-makeup/master/samples/face_landmark.gif)
 
 
