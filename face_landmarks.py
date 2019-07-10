@@ -4,7 +4,7 @@ import argparse
 import imutils
 import dlib
 import cv2
-
+import make_up
 
 # initialize dlib's face detector (HOG-based) and then create
 # the facial landmark predictor
@@ -29,6 +29,7 @@ while(cap.isOpened()):
   image = imutils.resize(frame, width=500)
   gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
   rects = detector(gray, 1)
+  img =0
   if ret == True:
     for (i, rect) in enumerate(rects):
         # determine the facial landmarks for the face region, then
@@ -36,7 +37,12 @@ while(cap.isOpened()):
         # array
         shape = predictor(gray, rect)
         shape = face_utils.shape_to_np(shape)
-    
+
+        # TODO: plot makeup here 
+
+        # img = make_up.plot(image, shape)
+
+
         # convert dlib's rectangle to a OpenCV-style bounding box
         # [i.e., (x, y, w, h)], then draw the face bounding box
         (x, y, w, h) = face_utils.rect_to_bb(rect)
